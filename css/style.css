@@ -14,30 +14,37 @@
     --cor4: #023E73;
 
     --fonte-principal: Sriracha, cursive;
-    --fonte-destaque: 'Passion One', cursive
+    --fonte-destaque: 'Passion One', cursive;
+    --fonte-padrao:  Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body{
+html, body{
+    min-height: 100%;
+    font-family: var(--fonte-padrao);
+}
+
+pre{
     font-family: var(--fonte-principal);
 }
 
 /* Cabeçalho */
 header{
     font-family: var(--fonte-destaque);
-    padding: 20px;
     background-color: var(--cor4);
    /*  height: 200px; max-width: 100%; */
 }
 
 header h1{
+    padding-top: 50px;
     font-weight: bold;
     font-size: 5em;
     text-align: center;
+    font-variant: small-caps;
     color: var(--cor0);
 }
 
 header p{
-    margin: 10px;
+    margin: 10px; padding-bottom: 50px;
     text-align: center;
     font-size: 1.2em;
     color: var(--cor0);
@@ -45,7 +52,7 @@ header p{
 header p > a{
     text-decoration: none;
     color: var(--cor0);
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 header p > a:hover{
@@ -57,24 +64,32 @@ header p > a:hover{
     
 } */
 
-main p, p.imagem, .imagem1{
-    font-size: 1.5em;
-    width: 400px;
-    padding: 10px;
+main pre{
+    padding-top: 10vh; padding-bottom: 10vh;
+}
+
+main pre, .imagem, .imagem1{
+    white-space: pre-line;
+    font-size: 3vw;
+    padding: 20px;
     line-height: 2.0em;
     text-align: left;
 }
 
-main p.p-imagem{
-    color: white;
-    background-color: rgba(0, 0, 0, 0.705);
-    height: 450px; margin: 30px 0px 30px 10px;
+.imagem, .imagem1{
+    display: inline-block;
 }
 
-main p.p-imagem1{
+main .imagem{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.705);
+    max-height: 90vh; margin: 30px 0px 30px 10px;
+}
+
+main .imagem1{
     color: white;
     background-color: rgba(0, 0, 0, 0.281);
-    height: 450px; margin: 30px 0px 30px 10px;
+    height: 550px; margin: 30px 0px 30px 10px;
 }
 
 .imagem-fundo{
@@ -94,8 +109,11 @@ main p.p-imagem1{
 }
 
 /* Rodapé */
+footer{
+    font-size: 80%;
+}
+
 footer > p{
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: var(--cor4);
     color: white;
